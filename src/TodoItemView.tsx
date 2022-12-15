@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {TodoItem} from './interfaces';
-import {isRowEven} from './utils';
+import {colorForDate} from './utils';
 
 interface Props {
   item: TodoItem;
@@ -12,7 +12,7 @@ interface Props {
 export const TodoItemView = (props: Props) => {
   const rowStyle = [
     styles.container,
-    {backgroundColor: isRowEven(props.index) ? 'white' : 'gray'},
+    {backgroundColor: colorForDate(props.item.date)},
   ];
   return (
     <TouchableOpacity

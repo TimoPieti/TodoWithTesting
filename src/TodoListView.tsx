@@ -6,6 +6,7 @@ import {TodoItemView} from './TodoItemView';
 interface Props {
   items: TodoItem[];
   loading: boolean;
+  error?: boolean;
   itemSelected: (item: TodoItem) => void;
 }
 
